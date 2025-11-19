@@ -1,0 +1,14 @@
+mozilla/
+session/
+dconf/
+btop/
+htop/
+nwg-displays/
+obsidian/
+pulse/
+
+
+user-dirs.dirs
+user-dirs.locale
+dolphinrc
+pavucontrol.ini
