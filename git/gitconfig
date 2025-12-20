@@ -1,0 +1,131 @@
+
+[user]
+	name = italojohnny
+	email = italojohnnydosanjos@gmail.com
+
+[core]
+    editor = nvim
+    excludesFile = ~/.gitignore
+    pager = delta
+	encoding = utf-8
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    navigate = true
+    dark = true
+    plus-style = "syntax green"
+    plus-emph-style = "syntax bold green"
+    minus-style = "syntax red"
+    minus-emph-style = "syntax bold red"
+
+
+[delta "decorations"]
+    commit-decoration-style = bold yellow box ul
+    file-style = bold yellow ul
+    file-decoration-style = none
+    hunk-header-decoration-style = yellow box ul
+    hunk-header-style = yellow ul
+
+
+[merge]
+    conflictStyle = diff3
+    tool = diff3
+
+[diff]
+    colorMoved = default
+    # compactionHeuristic = true
+    # mnemonicPrefix = true
+    # renames = copies
+    # algorithm = patience
+    # indentHeuristic = true
+    # wordRegex = .
+
+[color "diff"]
+    oldNormal = red strike
+    oldHighlight = "red strike"
+    newNormal = green
+    newHighlight = "green"
+    meta = blue
+    frag = magenta
+    commit = yellow bold
+    whitespace = red reverse
+
+[credential]
+	helper = store
+
+[blame]
+	coloring = repeatedLines
+
+[pretty]
+    myformat = %h - %an, %ad : %s
+    basic = %C(magenta)%h%Creset %C(green)%an%Creset %C(blue)%ar%Creset %C(yellow)%<(80,trunc)%s%Creset
+
+[alias]
+    blm = blame \
+        --color-lines \
+        --date=format:'%Y-%m-%d'
+
+    lol = log \
+        --graph \
+        --pretty=format:\"%C(auto)%h%d%Creset %C(cyan)(%cr)%Creset %C(green)%cn <%ce>%Creset %<(80,trunc)%s\"
+        #--format="%<(100,trunc)%s"
+
+    lold = log \
+        --graph \
+        --pretty=format:\"%C(auto)%h%d%Creset %C(cyan)(%ci)%Creset %C(green)%cn <%ce>%Creset %<(80,trunc)%s\"
+
+    lol2 = log \
+        --oneline \
+        --graph \
+        --decorate \
+        --pretty=format:\"%C(magenta)%h%Creset %C(blue)%cs%Creset %C(green)%aN%Creset %C(yellow)%D%Creset %<(80,trunc)%s\"
+
+    lol3 = log \
+        --all \
+        --graph \
+        --decorate \
+        --oneline \
+        --simplify-by-decoration \
+        --pretty=format:\"%C(magenta)%h%Creset %C(blue)%cs%Creset %C(green)%aN%Creset %C(yellow)%D%Creset %<(80,trunc)%s\"
+
+    ls = log \
+        --decorate \
+        --graph \
+        --no-merges \
+        --first-parent \
+        --pretty=format:\"%C(magenta)%h%Creset %C(blue)%ci%Creset %C(green)%aN%Creset %C(yellow)%D%Creset %<(80,trunc)%s\"
+
+    lg = log \
+        --decorate \
+        --graph \
+        --pretty=format:\"%C(magenta)%h%Creset %C(blue)%ci%Creset %C(green)%aN%Creset %C(yellow)%D%Creset %<(80,trunc)%s\"
+
+    lgg = log \
+        --all \
+        --decorate \
+        --graph \
+        --pretty=format:\"%C(magenta)%h%Creset %C(blue)%ci%Creset %C(green)%aN%Creset %C(yellow)%D%Creset %<(80,trunc)%s \"
+
+    lggg = log \
+        --all \
+        --graph \
+        --pretty=format:'%C(magenta)%h%Creset %C(blue)%ci%Creset %s %n%C(yellow)%D%Creset %n%C(blue)%ar%Creset %n%C(green)%an%Creset%n%n%n%n'
+
+    # mostra os commits que um arquivo sofreu
+    z-file-lg = log \
+        --pretty=format:'%C(magenta)%h%Creset %C(green)%an%Creset %C(blue)%ar%Creset %C(yellow)%<(80,trunc)%s%Creset'
+
+    # mostra as diffs que um arquivo sofreu
+    z-file-lgg = log \
+        -p --follow \
+        --pretty=format:'%C(magenta)%h%Creset %C(green)%an%Creset %C(blue)%ar%Creset\n%C(yellow)%<(80,trunc)%s%Creset'
+
+    # mostra os arquivos modificados em um commit
+    z-commit-files = \
+        show \
+        --name-only \
+        --pretty=format:'%C(magenta)%h%Creset %C(green)%an%Creset %C(blue)%ar%Creset %C(yellow)%<(80,trunc)%s%Creset'
+[mergetool]
+	prompt = false
