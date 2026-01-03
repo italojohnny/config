@@ -103,7 +103,6 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 # 1) Oh My Zsh inicializa
 
-
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
@@ -124,3 +123,9 @@ plugins=(
 setopt hist_ignore_dups
 setopt hist_reduce_blanks
 setopt share_history
+
+source ~/.config/zsh/python.sh
+source ~/.config/zsh/env.sh
+source ~/.config/zsh/alias.sh
+source /usr/share/fzf/key-bindings.zsh
+source /usr/share/fzf/completion.zsh
