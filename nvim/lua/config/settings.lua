@@ -28,12 +28,6 @@ autocmd({ "BufNewFile", "BufRead" }, {
 --  command = "source ~/.config/nvim/set_python.vim",
 --})
 
--- Arquivos TEX: desativa ALE
-autocmd({ "BufNewFile", "BufRead" }, {
-  pattern = "*.tex",
-  command = "ALEDisable",
-})
-
 -- YAML (opcional, estava comentado)
 -- autocmd({ "BufNewFile", "BufRead" }, {
 --   pattern = { "*.yaml", "*.yml" },
