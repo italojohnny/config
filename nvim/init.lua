@@ -1,3 +1,6 @@
+-- variaveis globais
+vim.g.textwidth_default = 79
+
 -- carregamento inicial de filetypes
 vim.g.do_filetype_lua = 1
 vim.g.did_load_filetypes = nil
